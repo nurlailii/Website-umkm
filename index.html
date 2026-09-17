@@ -3,50 +3,88 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kopi Dulu - Website UMKM</title>
+    <title>Kopi Nusa - Website UMKM</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <main class="page">
-      <section class="hero">
+  <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Navigasi utama">
+      <a class="brand" href="index.html">Kopi Nusa</a>
+      <ul>
+        <li><a aria-current="page" class="active" href="index.html">Beranda</a></li>
+        <li><a href="tentang.html">Tentang Kami</a></li>
+        <li><a href ="#kontak-singkat">Kontak Singkat</a></li >
+      </ul>
+    </nav>
+  </header>
+
+  <main id="konten" class="page">
+      <section class="hero" aria-labelledby="hero-title">
         <p class="eyebrow">UMKM Pekalongan</p>
-        <h1>Kopi Dulu</h1>
+        <h1 id="hero-title">Kopi Nusa</h1>
         <p>Kopi lokal pilihan untuk teman belajar, bekerja, dan berdiskusi.</p>
         <button id="promoButton" type="button">Lihat promo hari ini</button>
-      </section>
-
-      <section aria-labelledby="lokasi-title">
-        <h2 id="lokasi-title">Lokasi</h2>
-        <ul class="Lokasi">
-          <li>Jl. Kesana Kemari No.23 Pekalongan</li>
-        </ul>
-      </section>
-
-      <section aria-labelledby="jam buka-title">
-        <h2 id="Jam buka-title">Jam Buka</h2>
-        <ul class="Jam Buka">
-          <li>Buka Setiap Hari 10.00 - 23.00 WIB</li>
-        </ul>
+        <img src="assets/images/etalase-kopi.svg" alt="Etalase Kopi Nusa berisi kemasan kopi lokal" />
       </section>
 
       <section aria-labelledby="produk-title">
         <h2 id="produk-title">Produk Unggulan</h2>
-        <ul class="products">
+        <ul class="product-list">
           <li>
-          <strong>Espreso - Rp20.000</strong>
-          <p>Kopi hitam pekat yang diseduh dengan mesin ekspreso</p>
-          </li>
-          <li>
-          <strong>Americano - Rp18.000</strong>
-          <p>Campuran espreso dan air panas dengan rasa kopi yang lebih ringan</p>
-        </li>
-          <li>
-          <strong>Cold Brew Aren - Rp22.000</strong>
-          <p>Kopi dingin yang diseduh dengan manis gula aren asli </p>
-          </li>
-        </ul>
+    <article class="product-card">
+      <img src="assets/images/gulaaren.jpeg" alt="Gelas Kopi Gula Aren dingin" class="product-img">
+      <h3>Kopi Gula Aren</h3>
+      <p>Minuman kopi dingin dengan manis aren yang seimbang.</p>
+      <p class="price">Rp18.000</p>
+    </article>
+  </li>
+  <li>
+    <article class="product-card">
+      <img src="assets/images/americano.jpeg" alt="Gelas Kopi Americano Panas" class="product-img">
+      <h3>Americano</h3>
+      <p>Kopi hitam segar dengan cita rasa espresso murni yang mantap dan ringan.</p>
+      <p class="price">Rp15.000</p>
+    </article>
+  </li>
+  <li>
+    <article class="product-card">
+      <img src="assets/images/latte.jpeg" alt="Gelas Kopi Latte Panas" class="product-img">
+      <h3>Coffe Latte</h3>
+      <p>Perpaduan espresso dan susu creamy dengan sensasi lembut yang seimbang.</p>
+      <p class="price">Rp20.000</p>
+    </article>
+  </li>
+</ul>
+</section>
+
+      <section id="kontak-singkat" aria-labelledby="kontak-title">
+        <h2 id="kontak-title">Kontak Singkat</h2>
+
+        <div class="contact-list">
+          <div class="contact-card">
+            <h3>Lokasi</h3>
+            <p>Jl. Raya Kesana Kemari, No.23, Pekalongan</p>
+          </div>
+
+          <div class="contact-card">
+            <h3>Jam Buka</h3>
+            <p>Setiap Hari 10.00 - 23.00 WIB</p>
+          </div>
+
+          <div class="contact-card">
+            <h3>Info & Reservasi</h3>
+            <p>62895631926671</p>
+            <p>
+              <a href="https://wa.me/62895631926671" target="_blank" rel="noopener noreferrer">WhatsApp Official Kopi Nusa</a>
+            </p>
+          </div>
+        </div>
       </section>
     </main>
+    <footer class="site-footer">
+  <p>&copy; 2026 Kopi Nusa. Data pada halaman ini bersifat dummy.</p>
+</footer>
     <script src="js/script.js"></script>
   </body>
 </html>

@@ -30,10 +30,97 @@ body {
 
 button {
   padding: 12px 18px;
-  color: #2f2118;
+  color: #0c0c0c;
   font-weight: 700;
   cursor: pointer;
-  background: #ffd166;
+  background: #f7c06f;
   border: 0;
   border-radius: 999px;
+  margin-bottom: 24px;
+}
+
+.skip-link { position: absolute; left: -9999px; padding: 8px 12px; color: white; background: #2f2118; }
+.skip-link:focus { top: 8px; left: 8px; }
+.site-header { padding: 16px 20px; background: white; border-bottom: 1px solid #dccbbc; }
+.nav { max-width: 920px; margin: 0 auto; }
+.brand { display: inline-block; margin-bottom: 8px; color: #4b2715; font-weight: 800; text-decoration: none; }
+.nav ul { padding: 0; margin: 0; list-style: none; }
+.nav li { display: inline-block; margin-right: 12px; }
+.nav a[aria-current="page"] { font-weight: 800; }
+a:focus-visible,
+button:focus-visible { outline: 3px solid #2563eb; outline-offset: 3px; }
+.site-footer { padding: 24px 20px; color: white; text-align: center; background: #2f2118; }
+
+.product-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  list-style: none;
+  padding: 0 0 12px 0;
+  margin: 0;
+}
+
+.product-list li {
+  flex: 0 0 calc(33.333% - 14px);
+  min-width: 250px;
+  display: flex;
+}
+
+.product-card {
+  width: 100%;
+  background-color: #fefdf5;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card h3 {
+  margin-top: 0;
+}
+
+.product-card .price {
+  font-weight: bold;
+  color: #0f0f0f;
+  margin-bottom: 0;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Jarak antar-kotak */
+}
+
+.contact-card {
+  max-width: 450px; /* Batas lebar kotak */
+  background-color: #fefdf5;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-bottom: 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.contact-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1em;
+}
+
+.contact-card p {
+  margin: 0;
+}
+
+/* Tambahan khusus ukuran gambar produk lokal */
+.product-img {
+  width: 100%;
+  object-fit: contain;
+  background-color: #f6f0e8;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
 }

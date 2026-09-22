@@ -16,6 +16,7 @@ body {
   color: white;
   background: #6f3b1f;
   border-radius: 24px;
+  margin-bottom: 35px;
 }
 
 .eyebrow {
@@ -53,16 +54,16 @@ button:focus-visible { outline: 3px solid #2563eb; outline-offset: 3px; }
 
 .product-list {
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  gap: 20px;
+  flex-wrap: nowrap;        /* Menjaga item agar tetap di satu baris ke samping */
+  overflow-x: auto;         /* Membuat area bisa digeser secara horizontal */
+  gap: 20px;                /* Jarak antar kartu */
   list-style: none;
   padding: 0 0 12px 0;
   margin: 0;
 }
 
 .product-list li {
-  flex: 0 0 calc(33.333% - 14px);
+  flex: 0 0 calc(33.333% - 14px); /* Mengatur agar 3 item pas sejajar */
   min-width: 250px;
   display: flex;
 }
@@ -79,8 +80,10 @@ button:focus-visible { outline: 3px solid #2563eb; outline-offset: 3px; }
   justify-content: space-between;
 }
 
-.product-card h3 {
+.product-card figcaption {
   margin-top: 0;
+  font-weight: bold;
+  color: #111111;
 }
 
 .product-card .price {
@@ -118,9 +121,89 @@ button:focus-visible { outline: 3px solid #2563eb; outline-offset: 3px; }
 /* Tambahan khusus ukuran gambar produk lokal */
 .product-img {
   width: 100%;
-  object-fit: contain;
+  height: 220px;          /* Wajib ada agar tinggi semua gambar sama rata */
+  object-fit: cover;      /* Memotong gambar secara proporsional */
   background-color: #f6f0e8;
-  object-fit: cover;
   border-radius: 6px;
   margin-bottom: 12px;
+}
+
+img { max-width: 100%; height: auto; }
+figure { margin: 0 0 24px; }
+figcaption { margin-top: 8px; color: #6b5b52; }
+table { width: 100%; border-collapse: collapse; }
+caption { margin-bottom: 8px; font-weight: 700; text-align: left; }
+th,
+td { padding: 10px; text-align: left; border: 1px solid #dccbbc; }
+
+/* Mengubah galeri grid menjadi slider horizontal yang bisa digeser */
+.galeri-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  padding: 0 0 12px 0;
+  margin: 20px 0;
+  scroll-behavior: smooth;
+}
+
+/* Menyembunyikan scrollbar agar bersih (opsional) */
+.galeri-grid::-webkit-scrollbar {
+  height: 8px;
+}
+.galeri-grid::-webkit-scrollbar-thumb {
+  background: #dccbbc;
+  border-radius: 4px;
+}
+
+/* Mengatur ukuran kartu agar pas 3 sejajar dan bisa diset-scroll */
+.galeri-grid .media-card {
+  flex: 0 0 calc(33.333% - 14px);
+  min-width: 280px;
+  scroll-snap-align: start;
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Mengatur ukuran gambar di dalam kartu galeri */
+.galeri-grid .media-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* Agar tampilan di layar HP tetap rapi (menjadi 1 kolom bertumpuk) */
+@media (max-width: 768px) {
+  .galeri-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hanya menyasar subjudul utama, tidak termasuk h3 di dalam product-card */
+section > h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+section > h3::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #0e0d0d; /* Sesuaikan warna dengan tema */
+  border-radius: 50%;
+}
+
+section table:not(:last-child) {
+  margin-bottom: 30px; /* Jarak hanya untuk tabel yang bukan tabel terakhir */
 }

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Produk Kopi Nusa - Website UMKM</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/app.js" defer></script>
   </head>
-  <script src="js/app.js" defer></script>
   <body>
     <a class="skip-link" href="#konten">Lewati ke konten utama</a>
     <header class="site-header">
@@ -24,14 +24,14 @@
     <main id="konten" class="page">
       <div class="hero">
         <h1>Produk Kopi Nusa</h1>
-        <p>Pilih produk sesuai kebutuhan seduh rumaham, harian, atau minum ditempat.</p>
+        <p>Pilih produk sesuai kebutuhan seduh rumahan, harian, atau minum ditempat.</p>
       </div>
 
     <section class="section" aria-labelledby="produk-dinamis-title">
       <div class="section-header">
         <h2 id="produk-dinamis-title">Koleksi produk pilihan Kopi Nusa</h2>
         <p id="produk-ringkasan"></p>
-      </div>
+        <p id="produk-unggulan">Produk unggulan akan ditentukan melalui JavaScript.</p></div>
       <div id="produk-dinamis" class="js-product-grid"></div>
     </section>
 
@@ -135,7 +135,7 @@
   <h2 id="harga-title">Daftar Harga</h2>
   <div class="table-scroll" role="region" aria-labelledby="daftar-harga-caption" tabindex="0">
   <table>
-    <caption>Daftar harga produk seduh rumahan/harian</caption>
+    <caption id="caption-minum">Daftar harga produk seduh rumahan/harian</caption>
     <thead>
       <tr>
         <th scope="col">Produk</th>
@@ -170,7 +170,7 @@
 
     <div class="table-scroll" role="region" aria-labelledby="daftar-harga-caption" tabindex="0">
       <table>
-        <caption>Daftar harga produk minum di tempat</caption>
+        <caption id="caption-minum">Daftar harga produk minum di tempat</caption>
         <thead>
       <tr>
         <th scope="col">Produk</th>
@@ -190,7 +190,7 @@
         <td>Rp15.000</td>
       </tr>
       <tr>
-        <th scope="row">Caffe Latte</th>
+        <th scope="row">Coffe Latte</th>
         <td>250 ml</td>
         <td>Rp20.000</td>
       </tr>

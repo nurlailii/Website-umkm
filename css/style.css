@@ -315,6 +315,7 @@ ul {
 }
 
 .js-product-card {
+  position: relative;
   padding: var(--space-4);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -340,4 +341,9 @@ ul {
 .stock-badge.empty {
   background: #fee2e2;
   color: #991b1b;
+}
+
+#produk-unggulan {
+  font-weight: 700;
+  color: var(--color-primary, #6f3b1f);
 }

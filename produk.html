@@ -24,15 +24,23 @@
     <main id="konten" class="page">
       <div class="hero">
         <h1>Produk Kopi Nusa</h1>
-        <p>Pilih produk sesuai kebutuhan seduh rumahan, harian, atau minum ditempat.</p>
+        <p>Pilih produk sesuai kebutuhan seduh rumahan, harian, atau minum di tempat.</p>
       </div>
 
     <section class="section" aria-labelledby="produk-dinamis-title">
-      <div class="section-header">
+      <div class="section-heading">
+        <p class="eyebrow">Katalog</p>
         <h2 id="produk-dinamis-title">Koleksi produk pilihan Kopi Nusa</h2>
-        <p id="produk-ringkasan"></p>
-        <p id="produk-unggulan">Produk unggulan akan ditentukan melalui JavaScript.</p></div>
-      <div id="produk-dinamis" class="js-product-grid"></div>
+        <p id="produk-status" class="produk-status">Produk belum dimuat.</p>
+      </div>
+      
+      <div class="filter-bar" aria-label="Filter kategori produk">
+        <button type="button" class="filter-button is-active" data-filter="Semua">Semua</button>
+        <button type="button" class="filter-button" data-filter="Kopi">Kopi</button>
+        <button type="button" class="filter-button" data-filter="Bundling">Bundling</button>
+        <button type="button" class="filter-button" data-filter="Aksesori">Aksesori</button>
+      </div>
+      <div id="produk-grid" class="product-grid" aria-live="polite"></div>
     </section>
 
     <section aria-labelledby="kategori-title">
@@ -120,9 +128,9 @@
 
     <article class="product-card">
       <span class="product-badge">Hemat</span>
-      <h3>Paket Seduh Pekat</h3>
-      <p>Americano 250 gram dengan rasa pekat, cocok diseduh pagi hari.</p>
-      <p class="price">Rp40.000</p>
+      <h3>Paket Seduh</h3>
+      <p>Paket bundling seduh rumahan/harian lebih hemat.</p>
+      <p class="price">Rp82.000</p>
       <div class="card-actions">
         <a class="button" href="kontak.html">Tanya produk</a>
         <a href="#harga-title">Lihat tabel harga</a>
@@ -135,7 +143,7 @@
   <h2 id="harga-title">Daftar Harga</h2>
   <div class="table-scroll" role="region" aria-labelledby="daftar-harga-caption" tabindex="0">
   <table>
-    <caption id="caption-minum">Daftar harga produk seduh rumahan/harian</caption>
+    <caption id="caption-seduh">Daftar harga produk seduh rumahan/harian</caption>
     <thead>
       <tr>
         <th scope="col">Produk</th>
@@ -163,6 +171,11 @@
         <th scope="row">Seduh Coklat</th>
         <td>250 gram</td>
         <td>Rp45.000</td>
+      </tr>
+      <tr>
+        <th scope="row">Paket Seduh</th>
+        <td>250 gram x 2</td>
+        <td>Rp82.000</td>
       </tr>
       </tbody>
       </table>
